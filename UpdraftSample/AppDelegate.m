@@ -9,8 +9,7 @@
 #import "AppDelegate.h"
 #import "MyNavigationController.h"
 #import "TopViewController.h"
-
-
+#import <UpdraftSDK/UpdraftSDK.h>
 
 @interface AppDelegate ()
 
@@ -27,6 +26,16 @@
     MyNavigationController *navigationController = [[MyNavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    // Updraft Setting
+    [Updraft with];
+    
+    return YES;
+}
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    
+    // Updraft Stting
+    [Updraft returnFromUpdraftWithOpenURL:url options:options];
     
     return YES;
 }

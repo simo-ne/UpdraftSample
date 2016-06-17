@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8094E6E1D144FF200A4F3FC /* UpdraftSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8094E6D1D144FF200A4F3FC /* UpdraftSDK.framework */; };
+		E8094E6F1D144FF200A4F3FC /* UpdraftSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8094E6D1D144FF200A4F3FC /* UpdraftSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E88E347C1D14318F0020103C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E347B1D14318F0020103C /* main.m */; };
 		E88E347F1D14318F0020103C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E347E1D14318F0020103C /* AppDelegate.m */; };
 		E88E34821D14318F0020103C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E34811D14318F0020103C /* ViewController.m */; };
@@ -19,7 +21,22 @@
 		E88E349C1D14330E0020103C /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88E349A1D14330E0020103C /* TopViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E8094E6C1D144BC600A4F3FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E8094E6F1D144FF200A4F3FC /* UpdraftSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E8094E6D1D144FF200A4F3FC /* UpdraftSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpdraftSDK.framework; sourceTree = "<group>"; };
 		E88E34771D14318F0020103C /* UpdraftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpdraftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88E347B1D14318F0020103C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88E347D1D14318F0020103C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8094E6E1D144FF200A4F3FC /* UpdraftSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +70,7 @@
 		E88E346E1D14318F0020103C = {
 			isa = PBXGroup;
 			children = (
+				E8094E6D1D144FF200A4F3FC /* UpdraftSDK.framework */,
 				E88E34791D14318F0020103C /* UpdraftSample */,
 				E88E34781D14318F0020103C /* Products */,
 			);
@@ -113,6 +132,8 @@
 				E88E34731D14318F0020103C /* Sources */,
 				E88E34741D14318F0020103C /* Frameworks */,
 				E88E34751D14318F0020103C /* Resources */,
+				E85C14351D1447AC004E9BC7 /* ShellScript */,
+				E8094E6C1D144BC600A4F3FC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +190,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E85C14351D1447AC004E9BC7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"${PROJECT_DIR}/UpdraftSDK.framework/run.sh\" simo-ne/UpdraftSample";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E88E34731D14318F0020103C /* Sources */ = {
@@ -292,6 +329,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UpdraftSample",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UpdraftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nshimone.UpdraftSample;
@@ -303,6 +346,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UpdraftSample",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UpdraftSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nshimone.UpdraftSample;
@@ -329,6 +378,7 @@
 				E88E34931D14318F0020103C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
