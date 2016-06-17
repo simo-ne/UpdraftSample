@@ -14,6 +14,9 @@
 		E88E34881D14318F0020103C /* UpdraftSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E88E34861D14318F0020103C /* UpdraftSample.xcdatamodeld */; };
 		E88E348A1D14318F0020103C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88E34891D14318F0020103C /* Assets.xcassets */; };
 		E88E348D1D14318F0020103C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88E348B1D14318F0020103C /* LaunchScreen.storyboard */; };
+		E88E34961D1432940020103C /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E34951D1432940020103C /* MyNavigationController.m */; };
+		E88E349B1D14330E0020103C /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88E34991D14330E0020103C /* TopViewController.m */; };
+		E88E349C1D14330E0020103C /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88E349A1D14330E0020103C /* TopViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,11 @@
 		E88E34891D14318F0020103C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E88E348C1D14318F0020103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E88E348E1D14318F0020103C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E88E34941D1432940020103C /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		E88E34951D1432940020103C /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		E88E34981D14330E0020103C /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopViewController.h; path = view/TopViewController.h; sourceTree = "<group>"; };
+		E88E34991D14330E0020103C /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopViewController.m; path = view/TopViewController.m; sourceTree = "<group>"; };
+		E88E349A1D14330E0020103C /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopViewController.xib; path = view/TopViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		E88E34791D14318F0020103C /* UpdraftSample */ = {
 			isa = PBXGroup;
 			children = (
+				E88E34971D1432E50020103C /* view */,
 				E88E347D1D14318F0020103C /* AppDelegate.h */,
 				E88E347E1D14318F0020103C /* AppDelegate.m */,
 				E88E34801D14318F0020103C /* ViewController.h */,
@@ -70,6 +79,8 @@
 				E88E348E1D14318F0020103C /* Info.plist */,
 				E88E34861D14318F0020103C /* UpdraftSample.xcdatamodeld */,
 				E88E347A1D14318F0020103C /* Supporting Files */,
+				E88E34941D1432940020103C /* MyNavigationController.h */,
+				E88E34951D1432940020103C /* MyNavigationController.m */,
 			);
 			path = UpdraftSample;
 			sourceTree = "<group>";
@@ -80,6 +91,16 @@
 				E88E347B1D14318F0020103C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E88E34971D1432E50020103C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E88E34981D14330E0020103C /* TopViewController.h */,
+				E88E34991D14330E0020103C /* TopViewController.m */,
+				E88E349A1D14330E0020103C /* TopViewController.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88E349C1D14330E0020103C /* TopViewController.xib in Resources */,
 				E88E348D1D14318F0020103C /* LaunchScreen.storyboard in Resources */,
 				E88E348A1D14318F0020103C /* Assets.xcassets in Resources */,
 				E88E34851D14318F0020103C /* Main.storyboard in Resources */,
@@ -155,8 +177,10 @@
 			files = (
 				E88E34821D14318F0020103C /* ViewController.m in Sources */,
 				E88E347F1D14318F0020103C /* AppDelegate.m in Sources */,
+				E88E349B1D14330E0020103C /* TopViewController.m in Sources */,
 				E88E34881D14318F0020103C /* UpdraftSample.xcdatamodeld in Sources */,
 				E88E347C1D14318F0020103C /* main.m in Sources */,
+				E88E34961D1432940020103C /* MyNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
